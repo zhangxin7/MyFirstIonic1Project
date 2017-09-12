@@ -22,7 +22,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
-
+.config(function($ionicConfigProvider) {
+  $ionicConfigProvider.backButton.previousTitleText('').text('');
+  $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
+  $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');  
+})
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('demo', {
@@ -37,6 +41,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('demo.button', {
       url: '/button',
       templateUrl: '/templates/button.html'
+    })
+    .state('demo.list', {
+      url: '/list',
+      templateUrl: '/templates/list.html'
     })
     ;
 
