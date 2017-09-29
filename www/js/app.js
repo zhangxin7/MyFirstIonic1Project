@@ -46,6 +46,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/list',
       templateUrl: '/templates/list.html'
     })
+    .state('demo.card', {
+      url: '/card',
+      templateUrl: '/templates/card.html'
+    })
     ;
 
   $urlRouterProvider.otherwise('/demo/index');
