@@ -43,6 +43,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
       url: '/card',
       templateUrl: 'templates/card.html'
     })
+    .state('demo.form', {
+      url: '/form',
+      templateUrl: 'templates/form.html'
+    })
     ;
 
   $urlRouterProvider.otherwise('/demo/index');
