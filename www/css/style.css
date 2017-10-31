@@ -31,3 +31,7 @@
 .demo-block .list {
 	margin-bottom: 0;
 }
+.demo-block .tabs-demo {
+	position: relative;
+	height: 49px;
+}

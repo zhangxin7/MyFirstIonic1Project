@@ -47,6 +47,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
       url: '/form',
       templateUrl: 'templates/form.html'
     })
+    .state('demo.tab', {
+      url: '/tab',
+      templateUrl: 'templates/tab.html'
+    })
+
     ;
 
   $urlRouterProvider.otherwise('/demo/index');
