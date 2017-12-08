@@ -51,6 +51,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
       url: '/tab',
       templateUrl: 'templates/tab.html'
     })
+    .state('demo.actionsheet', {
+      url: '/actionsheet',
+      templateUrl: 'templates/actionsheet.html',
+      controller: 'ActionsheetCtrl'
+    })
 
     ;
 
