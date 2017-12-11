@@ -1,0 +1,12 @@
+<ion-view view-title="下拉刷新">
+	<ion-content>
+		<ion-refresher pulling-text="下拉刷新" on-refresh="refresh()"></ion-refresher>
+		<ul class="list">
+			<li class="item row" ng-repeat="user in users">
+				<div class="col">{{user.name}}</div>
+				<div class="col">{{user.sex}}</div>
+				<div class="col">{{user.age}}</div>
+			</li>
+		</ul>
+	</ion-content>
+</ion-view>

@@ -61,6 +61,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
       templateUrl: 'templates/backdrop.html',
       controller: 'BackdropCtrl'
     })
+    .state('demo.refresher', {
+      url: '/refresher',
+      templateUrl: 'templates/refresher.html',
+      controller: 'RefresherCtrl'
+    })
     ;
 
   $urlRouterProvider.otherwise('/demo/index');
