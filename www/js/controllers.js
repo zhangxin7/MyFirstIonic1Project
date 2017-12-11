@@ -32,19 +32,25 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('BackdropCtrl', function($scope, $ionicBackdrop, $timeout) {
+    $scope.showBackdrop = function() {
+        $ionicBackdrop.retain();
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+        // 2秒后关闭
+        $timeout(function() {
+          $ionicBackdrop.release();
+        }, 2000);
+    };
+
+    // 背景层显示事件
+    $scope.$on('backdrop.shown', function() {
+    
+    });
+
+    // 背景层隐藏事件
+    $scope.$on('backdrop.hidden', function() {
+    
+    });
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

@@ -56,7 +56,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
       templateUrl: 'templates/actionsheet.html',
       controller: 'ActionsheetCtrl'
     })
-
+    .state('demo.backdrop', {
+      url: '/backdrop',
+      templateUrl: 'templates/backdrop.html',
+      controller: 'BackdropCtrl'
+    })
     ;
 
   $urlRouterProvider.otherwise('/demo/index');
